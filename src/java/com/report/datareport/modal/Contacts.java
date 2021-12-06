@@ -22,22 +22,15 @@ public class Contacts {
 	@Id
 	private String contactId;
 	@Field
-	private String salutation;
-	@Field
-	private String businessTitle;
-	@Field
 	private String firstName;
 	@Field
 	private String middleName;
 	@Field
 	private String lastName;
-	@Field
+
 
 	private List<CustomerAssignment> customerAssignment;
 	private List<Email> contactEmail;
 	private List<Phone> contactPhone;
 	
-//	private CustomerAssignment customerAssignment;
-//	private Email contactEmail;
-//	private Address contacAddress;
 }
