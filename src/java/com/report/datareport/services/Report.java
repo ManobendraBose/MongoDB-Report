@@ -20,7 +20,7 @@ import org.springframework.stereotype.Service;
 
 import com.data.report.datareport.modal.Address;
 import com.data.report.datareport.modal.Email;
-
+import com.data.report.datareport.modal.CustAssignment;
 import lombok.extern.slf4j.Slf4j;
 
 
@@ -28,7 +28,7 @@ import lombok.extern.slf4j.Slf4j;
 @Service
 public class CReport {
 	
-	private static final String CCMREPORT_FILE_PATH = "/Reports/ContactsReport.xlsx";
+	private static final String REPORT_FILE_PATH = "/Reports/CReport.xlsx";
 	
 	public void generateReport(MongoTemplate mongoTemplate) throws IOException{
 
@@ -95,7 +95,7 @@ public class CReport {
 				}
 			}
 
-			FileOutputStream out = new FileOutputStream(new File(CCMREPORT_FILE_PATH));
+			FileOutputStream out = new FileOutputStream(new File(REPORT_FILE_PATH));
 			workbook.write(out);
 			out.close();
 		}
